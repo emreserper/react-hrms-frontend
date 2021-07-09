@@ -11,13 +11,19 @@ export default function LeftBar() {
     try {
       const resultJob = await cityAndJobPositionService.getJobPosition()
       setJobPositions(resultJob.data.data)
+    } catch (e) {
+      // hata göster
+    }
+  }, [cityAndJobPositionService.getJobPosition])
+
+  useEffect(async () => {
+    try {
       const resultCity = await cityAndJobPositionService.getCity()
       setCities(resultCity.data.data)
     } catch (e) {
       // hata göster
     }
-  }, [cityAndJobPositionService])
-
+  }, [cityAndJobPositionService.getCity])
 
   const jobPositions = JobPositions.map((jobPosition) => ({
     key: jobPosition.id,
