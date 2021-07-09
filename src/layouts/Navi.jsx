@@ -4,33 +4,23 @@ import { Header, Container } from 'semantic-ui-react'
 
 export default function Navi() {
   return (
-    <div>
-    <Container>
-      <div class="ui secondary  menu ">
-        <div class="item">
-          <Header color='teal' as='h2'>
-            Arayiş
-          </Header>
-        </div>
-        <a class="item">
-          <i class="search link icon"></i> İş ara
-        </a>
-        <a class="item ">
-          Anasayfa
-        </a>
+    <div className="Navbar">
+      <Container>
+        <div className="ui secondary  menu ">
+          <div className="item">
+            <Header color='teal' as='h2'>arayis.net</Header>
+          </div>
+          <a className="item"><i className="search link icon"></i> İş ara</a>
+          <a className="item ">Anasayfa</a>
+          <a className="item">Anasayfa</a>
+          <div className="right menu">
+            <LoginButtons />
+          </div>
 
-        <a class="item">
-          Friends
-        </a>
-
-        <div class="right menu">
-        <LoginButtons/>
         </div>
-      
-      </div>
-     
-    </Container>
-    <hr color='teal'/>
+
+      </Container>
+      <hr color='lightgray' />
     </div>
   )
 }

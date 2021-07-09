@@ -12,18 +12,24 @@ export default function JobAdvertisementList() {
   })
 
   return (
-    <Card.Group>
+    <Card.Group >
       {JobAdvertisements.map((jobAdvertisement)=>(
-      <Card fluid key={jobAdvertisement.id}>
+      <Card  fluid key={jobAdvertisement.id}>
         <Card.Content  >
+        <Image
+              floated="left"
+              size="tiny"
+              src="https://react.semantic-ui.com/images/wireframe/square-image.png"
+            />
           <Card.Header as='a'>{jobAdvertisement.jobPositionName}</Card.Header>
-          <Card.Content>{jobAdvertisement.companyName}</Card.Content>
-          <Card.Meta>{jobAdvertisement.cityName}</Card.Meta>
+          <Card.Content className="teal">{jobAdvertisement.companyName}</Card.Content>
+          <Card.Meta >{jobAdvertisement.cityName}</Card.Meta>
           <Card.Content>
             Yeni mezun yetitirilmek üzere frontend developer arayışı
-            <br></br>
-            Kontenjan: {jobAdvertisement.numberOfPeople}
           </Card.Content>
+          <div className="ui right floated meta">
+            {jobAdvertisement.creationDate}
+          </div>
         </Card.Content>
       </Card>
         

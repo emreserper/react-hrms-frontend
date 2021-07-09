@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Button, Form, Grid, Header, Image, Message, Segment } from 'semantic-ui-react'
+import { Button, Form, Header, Message, Segment } from 'semantic-ui-react'
 export default function EmployerRegister() {
   return (
 
