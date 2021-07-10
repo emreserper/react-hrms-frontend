@@ -1,6 +1,6 @@
 import React from 'react'
-import CandidateRegister from './CandidateRegister'
-import EmployerRegister from './EmployerRegister'
+import CandidateRegister from '../layouts/CandidateRegister'
+import EmployerRegister from '../layouts/EmployerRegister'
 import { Button, Grid } from 'semantic-ui-react'
 import { useState } from 'react'
 export default function Register() {
@@ -10,7 +10,7 @@ export default function Register() {
 
     return (
 
-        <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
+        <Grid textAlign='center' /*style={{ height: '100vh' }} */verticalAlign='middle'>
             <Grid.Column style={{ maxWidth: 450 }}>
 
                 <Button.Group size='huge'>

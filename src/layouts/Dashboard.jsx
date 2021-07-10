@@ -1,27 +1,14 @@
 import React from 'react'
-import { Container, Grid } from "semantic-ui-react";
-import Sidebar from "./Sidebar";
-import JobAdvertisement from "../pages/JobAdvertisement";
+import JobAdvertisementPage from '../pages/JobAdvertisementPage';
+import Register from '../pages/Register';
+import {Route} from "react-router-dom";
+import Login from '../pages/Login';
 export default function Dashboard() {
     return (
         <div className="dashboard">
-          
-        <Container>
-          <Grid>
-          
-            <Grid.Row>
-              <Grid.Column width={4}>
-                <Sidebar />
-              </Grid.Column>
-              <Grid.Column width={12}>
-                <JobAdvertisement />
-              </Grid.Column>
-            </Grid.Row>
-
-          </Grid>
-
-      
-        </Container>
+             <Route exact path="/jobadvertisement" component={JobAdvertisementPage} />
+             <Route exact path="/register" component={Register} />
+             <Route exact path="/login" component={Login} />
       </div>
     )
 }
