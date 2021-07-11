@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Button, Form, Header, Message, Segment } from 'semantic-ui-react'
+import { Button, Form, Header, Segment } from 'semantic-ui-react'
 export default function EmployerRegister() {
   return (
 
@@ -14,7 +14,6 @@ export default function EmployerRegister() {
           <Form.Input fluid icon='phone' iconPosition='left' placeholder='Telefon*' />
           <Form.Input fluid icon='linkify' iconPosition='left' placeholder='Web Sitesi' />
           <Form.Input fluid icon='envelope' iconPosition='left' placeholder='E-mail adresi*' />
-
           <Form.Input
             fluid
             icon='lock'
@@ -29,16 +28,11 @@ export default function EmployerRegister() {
             placeholder='Şifre Tekrar*'
             type='password'
           />
-
           <Button color='violet' fluid size='large'>
             Kayıt Ol
           </Button>
         </Segment>
       </Form>
-      <Message>
-        Zaten hesabın var mı? <a href='#'>Giriş yap</a>
-      </Message>
-
     </div>
   )
 }

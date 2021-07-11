@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link} from 'react-router-dom'
 import { Button, Form, Grid, Header, Message, Segment } from 'semantic-ui-react'
 export default function Login() {
     return (
@@ -25,7 +25,7 @@ export default function Login() {
             </Segment>
           </Form>
           <Message>
-            Hesabın yok mu? <a href='#'>Kayıt ol</a>
+            Hesabın yok mu? <Link to="/register">Kayıt ol</Link>
           </Message>
         </Grid.Column>
       </Grid>

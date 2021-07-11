@@ -1,10 +1,10 @@
 import React from 'react'
-import { Button, Form, Header, Message, Segment } from 'semantic-ui-react'
+import { Button, Form, Header, Segment } from 'semantic-ui-react'
 
 
 export default function CandidateRegister() {
 
-  
+
   return (
 
     <div>
@@ -16,7 +16,6 @@ export default function CandidateRegister() {
           <Form.Input fluid icon='user' iconPosition='left' placeholder='Ad*' />
           <Form.Input fluid icon='user' iconPosition='left' placeholder='Soyad*' />
           <Form.Input fluid icon='calendar alternate outline' iconPosition='left' placeholder='Doğum Tarihi*' />
-         
           <Form.Input fluid icon='user secret' iconPosition='left' placeholder='Tc Kimlik No*' />
           <Form.Input fluid icon='envelope' iconPosition='left' placeholder='E-mail adresi*' />
           <Form.Input
@@ -33,16 +32,11 @@ export default function CandidateRegister() {
             placeholder='Şifre Tekrar*'
             type='password'
           />
-          
           <Button color='teal' fluid size='large'>
             Kayıt Ol
           </Button>
         </Segment>
       </Form>
-      <Message>
-        Zaten hesabın var mı? <a href='#'>Giriş yap</a>
-      </Message>
-    
     </div>
 
   )

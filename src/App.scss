@@ -45,11 +45,23 @@ nav {
 .teal{
   color:#00b5ad;
 }
+.violet{
+  color:#6435c9;
+}
 .white{
   color:#fff;
 }
 
 
 .dashboard{
-    margin-top: 7rem;
+    margin-top: 5rem;
   }
+  .ui.cards a.card:hover, .ui.link.card:hover, .ui.link.cards .card:hover, a.ui.card:hover {
+    /* box-shadow: 0 1px 3px 0 #bcbdbd, 0 0 0 1px #d4d4d5; */
+     transform: translateY(0px)!important; 
+}
+.a-black{color:black!important;}
+
+.linkhover:hover{border-bottom:1px solid #4183c4; color:#4183c4}
+
+.borderhover:hover{    box-shadow: 0 5px 5px 1px #6435c9, 0 0 0 1px #6435c9!important;}
