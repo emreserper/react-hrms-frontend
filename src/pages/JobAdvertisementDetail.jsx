@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import { Container, Card, Image, Button } from 'semantic-ui-react'
 import JobAdvertisementService from '../services/jobAdvertisementService';
+import { NavLink } from "react-router-dom";
 
 export default function JobAdvertisementDetail() {
 
@@ -23,26 +24,29 @@ export default function JobAdvertisementDetail() {
         <Container >
             <Card fluid style={{ padding: "15px" }}>
                 <Card.Content  >
-                    <Card.Meta textAlign="right"> Oluşturulma tarihi: 11-02-2021</Card.Meta>
+                    <Card.Meta textAlign="right"><i>Oluşturulma tarihi: {jobAdvertisement.creationDate}</i></Card.Meta>
                     <Image
                         floated="left"
                         size="tiny"
                         src="https://react.semantic-ui.com/images/wireframe/square-image.png"
                     />
                     <Card.Header >{jobAdvertisement.jobPosition?.name}</Card.Header>
-                    <Card.Content className="teal">{jobAdvertisement.employer?.companyName}</Card.Content>
+                    <Card.Content className="teal linkhover" as={NavLink} to={`/EmployerPage/${jobAdvertisement.employer?.id}`}>{jobAdvertisement.employer?.companyName}</Card.Content>
                     <Card.Meta >{jobAdvertisement.city?.name}</Card.Meta>
                     <Card.Description>
-                        <b className="violet">İş açıklaması:</b><br /> {jobAdvertisement.description}
+                        <b className="teal">İş açıklaması:</b>
+                        <br /> 
+                        {jobAdvertisement.description}
                     </Card.Description>
                     <br />
+                    <b className="teal">Maaş aralığı:</b><br />
                      {jobAdvertisement.minSalary ? <Card.Meta >Minimum maaş: {jobAdvertisement.minSalary} ₺</Card.Meta> : <Card.Meta>Minimum maaş belirtilmemiş.</Card.Meta>}
                      {jobAdvertisement.maxSalary ? <Card.Meta >Maximum maaş: {jobAdvertisement.maxSalary} ₺</Card.Meta> : <Card.Meta>Maximum maaş belirtilmemiş.</Card.Meta>}
                     <br />
-                    <Card.Meta textAlign="left"><i class="users icon teal"></i> {jobAdvertisement.numberOfPeople}</Card.Meta>
+                    <Card.Meta textAlign="left" ><i class="users icon teal"></i> <span className="teal">Kontenjan:</span> {jobAdvertisement.numberOfPeople}</Card.Meta>
 
                     <br />
-                    {jobAdvertisement.applicationDeadline ? <Card.Meta textAlign="left">Son başvuru tarihi: {jobAdvertisement.applicationDeadline} </Card.Meta>: ""}
+                    {jobAdvertisement.applicationDeadline ? <Card.Meta textAlign="left"><i>Son başvuru tarihi: {jobAdvertisement.applicationDeadline}</i> </Card.Meta>: ""}
               
 
                     <br />

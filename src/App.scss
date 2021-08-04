@@ -52,7 +52,6 @@ nav {
   color:#fff;
 }
 
-
 .dashboard{
     margin-top: 5rem;
   }
@@ -65,3 +64,7 @@ nav {
 .linkhover:hover{border-bottom:1px solid #4183c4; color:#4183c4}
 
 .borderhover:hover{    box-shadow: 0 5px 5px 1px #6435c9, 0 0 0 1px #6435c9!important;}
+.font{    font-family: Lato,'Helvetica Neue',Arial,Helvetica,sans-serif;}
+
+.deActive{opacity: 0.4; pointer-events: none; }
+.deActive::after{background-color: red!important;  content: "İlanın başvuru süresi dolmuş";}

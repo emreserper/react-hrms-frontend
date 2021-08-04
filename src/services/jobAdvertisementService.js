@@ -13,4 +13,8 @@ export default class jobAdvertisementService{
         return axios.get(`${process.env.REACT_APP_API_URL}/jobAdvertisements/getallDesc`)
 
     }
+    getByEmployerId(id){
+        return axios.get(`${process.env.REACT_APP_API_URL}/jobAdvertisements/getByEmployer?employerId=`+id)
+
+    }
 }
